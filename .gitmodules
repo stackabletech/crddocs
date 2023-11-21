@@ -1,0 +1,3 @@
+[submodule "crddocs-generator"]
+	path = crddocs-generator
+	url = git@github.com:stackabletech/crddocs-generator.git
