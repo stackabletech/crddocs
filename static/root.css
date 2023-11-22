@@ -1,5 +1,3 @@
-@import url("https://unpkg.com/halfmoon@1.1.1/css/halfmoon-variables.min.css");
-
 :root {
     --primary-color: var(--indigo-color);
     --primary-color-light: var(--indigo-color-light);

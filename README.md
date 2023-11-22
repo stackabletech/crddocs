@@ -4,7 +4,7 @@ Generated with https://github.com/stackabletech/crddocs-generator (have a look t
 
 ## Building
 
-run `build.sh`, the site is generated in the `site` directory.
+run `make`, the site is generated in the `site` directory.
 
 ## Configuring
 
