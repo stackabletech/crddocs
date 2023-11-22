@@ -11,3 +11,7 @@ run `build.sh`, the site is generated in the `site` directory.
 configure the repos and versions in the `repo.yaml`.
 
 HTML templates are in the `template` dir, styling in `static`.
+
+## Deployment
+
+The site is deployed at https://crds.stackable.tech with Netlify.
