@@ -1,3 +1,4 @@
+---
 stackabletech:
   airflow-operator:
     - "23.7.0"
