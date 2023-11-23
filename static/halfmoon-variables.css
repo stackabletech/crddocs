@@ -1848,7 +1848,7 @@ CSS variables (CSS custom properties)
     ---------------------------------------------------------------------------
     */
 
-    --navbar-container-horizontal-padding: calc(var(--content-and-card-spacing) - var(--navbar-horizontal-padding));
+    --navbar-container-horizontal-padding: calc(var(--content-and-card-spacing));
     --navbar-container-horizontal-padding-xs: calc(var(--content-and-card-spacing-xs) - var(--navbar-horizontal-padding));
     --navbar-content-horizontal-margin: 1.5rem;
 
