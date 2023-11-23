@@ -15,3 +15,10 @@ HTML templates are in the `template` dir, styling in `static`.
 ## Deployment
 
 The site is deployed at https://crds.stackable.tech with Netlify.
+
+## Development
+
+### Template
+
+The `static/halfmoon-variables.css` file is from the halfmoon UI framework, v1.1.1.
+There was a slight modification for navbar alignment.

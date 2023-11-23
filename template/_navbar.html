@@ -1,4 +1,35 @@
 <nav class="navbar">
-    <a class="navbar-brand" href="/">Stackable CRD Documentation</a>
-    {{ partial "navbar" }}
+  <div class="container">
+    <a href="https://stackable.tech" class="navbar-brand">
+      <img src="/static/stackable-logo.png" alt="Stackable">
+    </a>
+    <ul class="navbar-nav d-none d-md-flex">
+      <li class="nav-item">
+        <a href="/" class="nav-link">CRD Documentation</a>
+      </li>
+      <li class="nav-item dropdown with-arrow">
+        <a class="nav-link" data-toggle="dropdown" id="nav-link-dropdown-toggle">
+          Operators 
+          <i class="fa fa-angle-down ml-5" aria-hidden="true"></i> <!-- ml-5= margin-left: 0.5rem (5px) -->
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-link-dropdown-toggle">
+          <a class="dropdown-item" href="/stackabletech/airflow-operator">Airflow Operator</a>
+          <a class="dropdown-item" href="/stackabletech/druid-operator">Druid Operator</a>
+          <a class="dropdown-item" href="/stackabletech/hbase-operator">HBase Operator</a>
+          <a class="dropdown-item" href="/stackabletech/hdfs-operator">HDFS Operator</a>
+          <a class="dropdown-item" href="/stackabletech/hive-operator">Hive Operator</a>
+          <a class="dropdown-item" href="/stackabletech/kafka-operator">Kafka Operator</a>
+          <a class="dropdown-item" href="/stackabletech/nifi-operator">NiFi Operator</a>
+          <a class="dropdown-item" href="/stackabletech/spark-k8s-operator">Spark Operator</a>
+          <a class="dropdown-item" href="/stackabletech/superset-operator">Superset Operator</a>
+          <a class="dropdown-item" href="/stackabletech/trino-operator">Trino Operator</a>
+          <a class="dropdown-item" href="/stackabletech/zookeeper-operator">ZooKeeper Operator</a>
+          <a class="dropdown-item" href="/stackabletech/opa-operator">OPA Operator</a>
+          <a class="dropdown-item" href="/stackabletech/commons-operator">Commons Operator</a>
+          <a class="dropdown-item" href="/stackabletech/listener-operator">Listener Operator</a>
+          <a class="dropdown-item" href="/stackabletech/secret-operator">Secret Operator</a>
+        </div>
+      </li>
+    </ul>
+  </div>
 </nav>
