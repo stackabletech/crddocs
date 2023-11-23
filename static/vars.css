@@ -1,0 +1,59 @@
+:root {
+    /* colors */
+    --color-white: #fff;
+    --color-smoke-10: #f8f9fc;
+    --color-smoke-30: #f6f8fb;
+    --color-smoke-50: #eff2f7;
+    --color-smoke-70: #e8edf4;
+    --color-smoke-90: #e1e7f1;
+    --color-gray-10: #c1c1c1;
+    --color-gray-30: #8e8e8f;
+    --color-gray-50: #80828a;
+    --color-gray-70: #5d5e5a;
+    --color-jet-20: #3a4557;
+    --color-jet-30: #343d4d;
+    --color-jet-50: #2d3543;
+    --color-jet-70: #272e3a;
+    --color-jet-80: #242b36;
+    --color-black: #000;
+    --color-brand-primary: #1880bd;
+    --color-brand-secondary: #b80069;
+    /* fonts */
+    --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
+    --body-font-size: 1.0625em; /* 17px */
+    --body-font-size--desktop: 1.125em; /* 18px */
+    --body-font-size--print: 0.9375em; /* 15px */
+    --body-line-height: 1.15;
+    --body-font-color: var(--color-jet-70);
+    --body-font-family: "Titillium Web", sans-serif;
+    --body-font-weight-bold: 600;
+    --monospace-font-family: "Roboto Mono", monospace;
+    --monospace-font-weight-bold: 500;
+    /* base */
+    --body-background: var(--color-white);
+    --panel-background: var(--color-smoke-30);
+    --panel-border-color: var(--color-smoke-90);
+    --scrollbar-thumb-color: var(--color-gray-10);
+    /* navbar */
+    --navbar-background: var(--color-jet-70);
+    --navbar-font-color: var(--color-white);
+    --navbar_hover-background: var(--color-black);
+    --navbar-button-background: var(--color-brand-secondary);
+    --navbar-button-border-color: var(--color-brand-secondary);
+    --navbar-button-font-color: var(--color-wite);
+    --navbar-menu-border-color: var(--panel-border-color);
+    --navbar-menu-background: var(--color-white);
+    --navbar-menu-font-color: var(--color-white);
+    --navbar-menu_hover-background: var(--color-smoke-50);
+
+    /* original / halfmoon --- TO BE REMOVED */
+    --primary-color: var(--indigo-color);
+    --primary-color-light: var(--indigo-color-light);
+    --primary-color-very-light: var(--indigo-color-very-light);
+    --primary-color-dark: var(--indigo-color-dark);
+    --primary-color-very-dark: var(--indigo-color-very-dark);
+    --primary-box-shadow-color: var(--indigo-box-shadow-color);
+    --primary-box-shadow-color-darker: var(--indigo-box-shadow-color-darker);
+    --text-color-on-primary-color-bg: var(--text-color-on-indigo-color-bg);
+    --dm-link-text-color: var(--indigo-color-light);
+}
