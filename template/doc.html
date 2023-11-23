@@ -38,8 +38,12 @@
     marked.use({
         renderer: {
             code: (code, lang, escaped) => {
-                const tokenizedCode = window.Prism ? Prism.highlight(code, Prism.languages[lang], lang) : `${code}`;
-                return `<pre class="language-${lang}"><code class="language-${lang}">${tokenizedCode}</code></pre>`;
+                if (lang === undefined) {
+                    return `<pre><code>${code}</code></pre>`;
+                } else {
+                    const tokenizedCode = window.Prism ? Prism.highlight(code, Prism.languages[lang], lang) : `${code}`;
+                    return `<pre class="language-${lang}"><code class="language-${lang}">${tokenizedCode}</code></pre>`;
+                }
             }
         }
     })
@@ -178,6 +182,7 @@
     render(html`<${CRD} />`, document.querySelector('#renderTarget'));
 </script>
 <script defer src="https://unpkg.com/prismjs@1/components/prism-core.min.js"></script>
+<script defer src="https://unpkg.com/prismjs@1/components/prism-yaml.min.js"></script>
 <script defer src="https://unpkg.com/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
 <style>
     /* Remove extra whitespace introduced by markdown translation */
