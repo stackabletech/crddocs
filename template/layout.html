@@ -14,9 +14,12 @@
         {{ if not .Page.DisableNavBar }}
         {{ template "_navbar" . }}
         {{ end }}
-        {{ yield }}
+        <div class="content-wrapper">
+            {{ yield }}
+            {{ template "_footer" . }}
+        </div>
     </div>
-    {{ template "_footer" . }}
+    {{ template "_bottom-scripts" . }}
 </body>
 
 </html>
