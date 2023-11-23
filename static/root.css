@@ -99,3 +99,36 @@ body .content-wrapper {
         font-size: 1.6rem;
     }
 }
+
+/** overrides for the halfmoon stuff */
+
+.navbar {
+    background: var(--navbar-background);
+}
+
+.nav-link {
+    color: var(--navbar-font-color);
+}
+
+.nav-link:hover {
+    color: var(--navbar-font-color);
+    text-decoration: underline;
+}
+
+.nav-item.active > .nav-link,
+.nav-item.show > .nav-link {
+    color: var(--navbar-font-color);
+}
+
+.nav-item.active > .nav-link:hover,
+.nav-item.show > .nav-link:hover {
+    color: var(--navbar-font-color);
+}
+
+.navbar-brand > img {
+    margin-top: -0.5rem;
+}
+
+.nav-item {
+    margin-top: 0.5rem;
+}
