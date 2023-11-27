@@ -1,18 +1,16 @@
-<div class="content-wrapper">
-    <div class="container">
-        <div class="content">
-            <h1 class="content-title"><a href="/{{ .Repo }}/{{ .Tag }}">{{ .Repo }}@{{ .Tag }}</a></h1>
-            <select class="form-control w-md-400 w-sm-full mb-md-10 mb-5" onchange="handleSelect(this)">
-                {{ $actual := .Tag }}{{ $repo := .Repo }}{{ range $name := .Tags }}
-                    {{ if eq $name $actual }}
-                    <option value="/{{ $repo }}/{{ $name }}" selected="selected">{{ $name }}</option>
-                    {{ else }}
-                    <option value="/{{ $repo }}/{{ $name }}" >{{ $name }}</option>
-                    {{ end }}
+<div class="container">
+    <div class="content">
+        <h1 class="content-title"><a href="/{{ .Repo }}/{{ .Tag }}">{{ .Repo }}@{{ .Tag }}</a></h1>
+        <select class="form-control w-md-400 w-sm-full mb-md-10 mb-5" onchange="handleSelect(this)">
+            {{ $actual := .Tag }}{{ $repo := .Repo }}{{ range $name := .Tags }}
+                {{ if eq $name $actual }}
+                <option value="/{{ $repo }}/{{ $name }}" selected="selected">{{ $name }}</option>
+                {{ else }}
+                <option value="/{{ $repo }}/{{ $name }}" >{{ $name }}</option>
                 {{ end }}
-            </select>
-            <div id="crds"></div>
-        </div>
+            {{ end }}
+        </select>
+        <div id="crds"></div>
     </div>
 </div>
 
