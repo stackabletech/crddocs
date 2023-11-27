@@ -45,6 +45,9 @@
     --navbar-menu-background: var(--color-white);
     --navbar-menu-font-color: var(--color-white);
     --navbar-menu_hover-background: var(--color-smoke-50);
+    /* footer */
+    --footer-font-color: var(--color-white);
+    --footer-line-height: 1.6;
 
     /* original / halfmoon --- TO BE REMOVED */
     --primary-color: var(--indigo-color);

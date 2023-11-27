@@ -3,11 +3,14 @@
 }
 
 .footer {
-  background-color: var(--footer-background);
+  height: 500px;
   color: var(--footer-font-color);
-  font-size: calc(15 / var(--rem-base) * 1rem);
+  font-size: calc(21 / var(--rem-base) * 1rem);
   line-height: var(--footer-line-height);
-  padding: 1.5rem;
+}
+
+.footer h2 {
+  font-size: calc(34 / var(--rem-base) * 1rem);
 }
 
 .footer p {
