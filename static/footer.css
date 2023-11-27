@@ -1,9 +1,6 @@
-.navbar-static-bottom {
-  
-}
-
 .footer {
-  height: 500px;
+  height: auto;
+  padding: 27px;
   color: var(--footer-font-color);
   font-size: calc(21 / var(--rem-base) * 1rem);
   line-height: var(--footer-line-height);
