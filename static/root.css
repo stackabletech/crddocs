@@ -9,35 +9,6 @@
     }
 }
 
-.home-page .hero {
-    margin-top: 10vh;
-    margin-bottom: 5vh;
-}
-
-.home-page .hero .site-title {
-    margin-bottom: 2rem;
-}
-
-.home-page .org-links {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-}
-
-.home-page .org-link {
-    font-size: 2rem;
-}
-
-@media screen and (max-width: 575px) {
-    .home-page .org-links {
-        row-gap: .5rem;
-    }
-
-    .home-page .org-link {
-        font-size: 1.6rem;
-    }
-}
-
 /** overrides for the halfmoon stuff */
 
 .navbar {
