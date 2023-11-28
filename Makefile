@@ -6,6 +6,6 @@ serve:
 	python -m http.server --directory site
 
 clean:
-	rm crddocs-generator/doc
-	rm crddocs-generator/gitter
-	rm -r site
+	rm -f crddocs-generator/doc
+	rm -f crddocs-generator/gitter
+	rm -rf site
