@@ -1,0 +1,20 @@
+name: Trigger Netlify build hook
+
+# This job simply calls a trigger hook in netlify.
+# The hook is configured in an organization secret.
+# https://docs.netlify.com/configure-builds/build-hooks/
+
+on:
+  schedule:
+    # Monday to Friday, 2:30 in the night
+    - cron: '30 2 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Netlify build hook
+        env:
+          HOOK_URL: ${{ secrets.NETLIFY_CRD_DOCS_BUILD_TRIGGER_HOOK }}
+        run: curl -X POST -d '{}' $HOOK_URL
