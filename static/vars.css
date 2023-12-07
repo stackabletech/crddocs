@@ -50,13 +50,18 @@
     --footer-line-height: 1.6;
 
     /* original / halfmoon --- TO BE REMOVED */
-    --primary-color: var(--indigo-color);
-    --primary-color-light: var(--indigo-color-light);
-    --primary-color-very-light: var(--indigo-color-very-light);
-    --primary-color-dark: var(--indigo-color-dark);
-    --primary-color-very-dark: var(--indigo-color-very-dark);
-    --primary-box-shadow-color: var(--indigo-box-shadow-color);
-    --primary-box-shadow-color-darker: var(--indigo-box-shadow-color-darker);
-    --text-color-on-primary-color-bg: var(--text-color-on-indigo-color-bg);
-    --dm-link-text-color: var(--indigo-color-light);
+    --color-brand-primary-light: #5da6d1;
+    --color-brand-primary-very-light: #a3cce5;
+    --color-brand-primary-dark: #115a84;
+    --color-brand-primary-very-dark: #0a334c;
+    --color-brand-primary-shadow-color: #74b3d7;
+    --color-brand-primary-shadow-color-darker: #5da6d1;
+    --primary-color: var(--color-brand-primary);
+    --primary-color-light: var(--color-brand-primary-light);
+    --primary-color-very-light: var(--color-brand-primary-very-light);
+    --primary-color-dark: var(--color-brand-primary-dark);
+    --primary-color-very-dark: var(--color-brand-primary-very-dark);
+    --primary-box-shadow-color: var(--color-brand-primary-shadow-color);
+    --primary-box-shadow-color-darker: var(--color-brand-primary-shadow-color-darker);
+    --lm-link-text-color: var(--color-brand-primary);
 }
