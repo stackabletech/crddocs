@@ -63,6 +63,10 @@
     function CRD() {
         const expandAll = useCallback(() => bus.emit('expand-all'), []);
         const collapseAll = useCallback(() => bus.emit('collapse-all'), []);
+
+        // this used to go under the codeblock, but our descriptions are a bit useless at the moment
+        // <p class="font-size-18">${React.createElement('div', { dangerouslySetInnerHTML: { __html: getDescription(Schema) } })}</p>
+
         return html`
             <div class="parts d-md-flex justify-content-between mt-md-20 mb-md-20">
                 <${PartLabel} type="Kind" value=${Kind} />
@@ -72,8 +76,6 @@
 
             <hr class="mb-md-20" />
             <pre><code class="language-yaml">${`apiVersion: ${Group}/${Version}\nkind: ${Kind}`}</code></pre>
-
-            <p class="font-size-18">${React.createElement('div', { dangerouslySetInnerHTML: { __html: getDescription(Schema) } })}</p>
 
             <div class="${properties == null ? 'd-none' : 'd-flex'} flex-row-reverse mb-10 mt-10">
                 <button class="btn ml-10" type="button" onClick=${expandAll}>+ expand all</button>
