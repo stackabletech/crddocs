@@ -32,11 +32,17 @@
     const { Repo, CRDs, Tag, At, } = JSON.parse(`{{ .JsonData }}`);
     const data = Object.keys(CRDs).map(key => CRDs[key]);
 
+    function renderLink(row, linkText) {
+        const href = `/${Tag}/${row.Group}/${row.Kind}/${row.Version}`;
+
+        return html`<a href=${href}>${linkText}</a>`;
+    }
+
     const columns = [
         {
             Header: 'Kind',
             accessor: 'Kind',
-            Cell: ({ row: { original }, value }) => html`<a href=${`/${Repo}/${Tag}/${original.Group}/${original.Kind}/${original.Version}`}>${value}</a>`
+            Cell: ({ row: { original }, value }) => renderLink(original, value)
         },
         {
             Header: 'Group',
