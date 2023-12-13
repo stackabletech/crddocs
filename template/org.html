@@ -1,6 +1,6 @@
 <div class="container">
     <div class="content">
-        <h1 class="content-title"><a href="/{{ .Repo }}/{{ .Tag }}">{{ .Repo }}@{{ .Tag }}</a></h1>
+        <h1 class="content-title">CRD Documentation: {{ .Repo }}</h1>
         <select class="form-control w-md-400 w-sm-full mb-md-10 mb-5" onchange="handleSelect(this)">
             {{ $actual := .Tag }}{{ $repo := .Repo }}{{ range $name := .Tags }}
                 {{ if eq $name $actual }}
