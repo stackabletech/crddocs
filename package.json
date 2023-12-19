@@ -2,7 +2,6 @@
   "scripts": {
     "build:home": "esbuild js/home.js --bundle  --minify --sourcemap --outfile=static/js/home.js",
     "build:doc": "esbuild js/doc.js --bundle  --minify --sourcemap --format=esm --outfile=static/js/doc.js",
-    "build:copy:css": "cp node_modules/prismjs/themes/prism.min.css static/css/prism.css && cp node_modules/prismjs/themes/prism-okaidia.min.css static/css/prism-okaidia.css",
     "build": "pnpm build:copy:css && pnpm build:home && pnpm build:doc"
   },
   "devDependencies": {
