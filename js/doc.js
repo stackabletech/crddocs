@@ -7,6 +7,7 @@ import DOMPurify from 'dompurify'
 import { html } from 'htm/react'
 import slugify from 'slugify'
 import marked from 'marked'
+import halfmoon from 'halfmoon'
 
 const bus = new EventEmitter3();
 window.bus = bus;
