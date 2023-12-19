@@ -1,9 +1,10 @@
 @import "halfmoon-variables.css";
 @import "vars.css";
 @import "footer.css";
-
-@import "css/prism.css";
-@import "css/prism-okaidia.css";
+/* fontawesome */
+@import "fontawesome.min.css";
+@import "brands.min.css";
+@import "solid.min.css";
 
 @media (max-width: 576px) {
     body .content-wrapper>div {
