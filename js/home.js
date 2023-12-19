@@ -1,4 +1,3 @@
-// import * as react from 'react'
 import { render } from 'react-dom'
 import { html } from 'htm/react'
 import { useTable, useSortBy } from 'react-table'

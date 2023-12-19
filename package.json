@@ -1,8 +1,9 @@
 {
   "scripts": {
     "build:home": "esbuild js/home.js --bundle  --minify --sourcemap --outfile=static/js/home.js",
+    "build:org": "esbuild js/org.js --bundle  --minify --sourcemap --outfile=static/js/org.js",
     "build:doc": "esbuild js/doc.js --bundle  --minify --sourcemap --format=esm --outfile=static/js/doc.js",
-    "build": "pnpm build:copy:css && pnpm build:home && pnpm build:doc"
+    "build": "pnpm build:home && pnpm build:org && pnpm build:doc"
   },
   "devDependencies": {
     "esbuild": "^0.19.10",
