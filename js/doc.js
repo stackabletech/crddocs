@@ -41,7 +41,6 @@ marked.use({
 })
 
 const { Kind, Group, Version, Schema } = JSON.parse(document.getElementById('pageData').textContent);
-console.log(Kind, Group, Version, Schema)
 
 const properties = Schema.Properties;
 if (properties?.apiVersion) delete properties.apiVersion;
