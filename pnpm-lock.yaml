@@ -20,6 +20,9 @@ dependencies:
   eventemitter3:
     specifier: 4.0.7
     version: 4.0.7
+  halfmoon:
+    specifier: ^1.1.1
+    version: 1.1.1
   htm:
     specifier: '3'
     version: 3.1.1
@@ -333,6 +336,10 @@ packages:
     resolution: {integrity: sha512-goW1b+d9q/HIwbVYZzZ6SsTr4IgE+WA44A0GmPIQstuOrgsFcT7VEJ48nmr9GaRtNu0XTKacFLGnBPAM6Afouw==}
     dependencies:
       delegate: 3.2.0
+    dev: false
+
+  /halfmoon@1.1.1:
+    resolution: {integrity: sha512-w/ydT3CixxxxdJP4a3sqSzUnCJFmhvcqE2vQOIsWCfevpqanKlbGQNUwKJH0nKvo13M89eetM3R0gsTOfNLGHA==}
     dev: false
 
   /htm@3.1.1:
