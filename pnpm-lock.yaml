@@ -27,8 +27,8 @@ dependencies:
     specifier: '3'
     version: 3.1.1
   marked:
-    specifier: 1.2.4
-    version: 1.2.4
+    specifier: 4.0.10
+    version: 4.0.10
   prismjs:
     specifier: ^1.29.0
     version: 1.29.0
@@ -357,9 +357,9 @@ packages:
       js-tokens: 4.0.0
     dev: false
 
-  /marked@1.2.4:
-    resolution: {integrity: sha512-6x5TFGCTKSQBLTZtOburGxCxFEBJEGYVLwCMTBCxzvyuisGcC20UNzDSJhCr/cJ/Kmh6ulfJm10g6WWEAJ3kvg==}
-    engines: {node: '>= 8.16.2'}
+  /marked@4.0.10:
+    resolution: {integrity: sha512-+QvuFj0nGgO970fySghXGmuw+Fd0gD2x3+MqCWLIPf5oxdv1Ka6b2q+z9RP01P/IaKPMEramy+7cNy/Lw8c3hw==}
+    engines: {node: '>= 12'}
     hasBin: true
     dev: false
 
