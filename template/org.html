@@ -14,100 +14,16 @@
     </div>
 </div>
 
-{{ template "_scripts" . }}
 <script type="text/javascript">
     function handleSelect(elm)
     {
        window.location = elm.value;
     }
-  </script>
-<script src="https://unpkg.com/react-table@7/dist/react-table.production.min.js"></script>
-<script type="module">
-    import { formatRelative } from 'https://cdn.jsdelivr.net/npm/date-fns/+esm';
-
-    const { render } = ReactDOM;
-    const { html } = htmReact;
-    const { useTable, useSortBy, useGlobalFilter  } = ReactTable;
-
-    const { Repo, CRDs, Tag, At, } = JSON.parse(`{{ .JsonData }}`);
-    const data = Object.keys(CRDs).map(key => CRDs[key]);
-
-    function renderLink(row, linkText) {
-        const href = `/${Tag}/${row.Group}/${row.Kind}/${row.Version}`;
-
-        return html`<a href=${href}>${linkText}</a>`;
-    }
-
-    const columns = [
-        {
-            Header: 'Kind',
-            accessor: 'Kind',
-            Cell: ({ row: { original }, value }) => renderLink(original, value)
-        },
-        {
-            Header: 'Group',
-            accessor: 'Group'
-        },
-        {
-            Header: 'Version',
-            accessor: 'Version'
-        }
-    ];
-
-    function CRDHeader(column) {
-        let bla = (column.isSorted
-                    ? column.isSortedDesc
-                        ? html`<i class="fas fa-sort-down"></i>`
-                        : html`<i class="fas fa-sort-up"></i>`
-                    : html`<i class="fas fa-sort"></i>`)
-        return html`<th ...${column.getHeaderProps(column.getSortByToggleProps())}>
-        ${column.render('Header')}
-            <span class="sort-header ${column.isSorted ? 'sort-header-active' : ''}">
-              ${bla}
-            </span>
-        </th>`
-    }
-
-    function CRDTable() {
-        const table = useTable({ columns, data }, useSortBy, useGlobalFilter);
-         const {
-            getTableProps,
-            getTableBodyProps,
-            headerGroups,
-            rows,
-            prepareRow,
-            setGlobalFilter,
-            state: { globalFilter }
-        } = table;
-
-        return html`
-        <div class="table-responsive">
-            <table class="table table-striped table-outer-bordered" ...${getTableProps()}>
-                <thead>
-                    ${headerGroups.map(group => html`
-                    <tr ...${group.getHeaderGroupProps()}>
-                        ${group.headers.map(CRDHeader)}
-                    </tr>
-                    `)}
-                </thead>
-                <tbody ...${getTableBodyProps()}>
-                    ${rows.map(row => {
-                        prepareRow(row)
-                        return html`
-                        <tr ...${row.getRowProps()}>
-                            ${row.cells.map(cell => html`
-                            <td ...${cell.getCellProps()}>${cell.render('Cell')}</td>
-                            `)}
-                        </tr>
-                        `
-                    })}
-                </tbody>
-            </table>
-        </div>`;
-    }
-
-    render(html`<${CRDTable} />`, document.getElementById("crds"));
 </script>
+
+<script id="pageData" type="application/json">{{ . }}</script>
+<script src="/static/js/org.js"></script>
+
 <style>
     #crds .sort-header {
         margin-left: 1rem;

@@ -1,9 +1,13 @@
 @import "halfmoon-variables.css";
 @import "vars.css";
 @import "footer.css";
+/* fontawesome */
+@import "fontawesome.min.css";
+@import "brands.min.css";
+@import "solid.min.css";
 
 @media (max-width: 576px) {
-    body .content-wrapper > div {
+    body .content-wrapper>div {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -24,20 +28,32 @@
     text-decoration: underline;
 }
 
-.nav-item.active > .nav-link,
-.nav-item.show > .nav-link {
+.nav-item.active>.nav-link,
+.nav-item.show>.nav-link {
     color: var(--navbar-font-color);
 }
 
-.nav-item.active > .nav-link:hover,
-.nav-item.show > .nav-link:hover {
+.nav-item.active>.nav-link:hover,
+.nav-item.show>.nav-link:hover {
     color: var(--navbar-font-color);
 }
 
-.navbar-brand > img {
+.navbar-brand>img {
     margin-top: -0.5rem;
 }
 
 .nav-item {
     margin-top: 0.5rem;
+}
+
+/* Add custom code block styling */
+
+.shiki {
+    padding: 1em;
+    border-radius: 0.3em;
+    overflow: auto;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 1em;
+    text-align: left;
+    line-height: 1.5;
 }
