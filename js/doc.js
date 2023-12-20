@@ -1,14 +1,20 @@
 import React, { useMemo, useState, useEffect, useCallback } from 'react'
 import EventEmitter3 from 'eventemitter3'
-import { getHighlighter } from 'shikiji'
 import ClipboardJS from 'clipboard'
 import { render } from 'react-dom'
 import DOMPurify from 'dompurify'
 import { html } from 'htm/react'
+import halfmoon from 'halfmoon'
 import slugify from 'slugify'
 import marked from 'marked'
-import halfmoon from 'halfmoon'
 
+// Syntax highlighting imports
+import { getHighlighterCore } from 'shikiji/core'
+import dracula from 'shikiji/themes/dracula.mjs'
+import { getWasmInlined } from 'shikiji/wasm'
+import yaml from 'shikiji/langs/yaml.mjs'
+
+const supportedLangs = ['yaml'];
 const bus = new EventEmitter3();
 window.bus = bus;
 
@@ -20,11 +26,10 @@ clipboard.on('success', e => {
   })
 });
 
-// const supportedLangs = ['yaml', 'shell', 'rust'];
-const supportedLangs = ['yaml'];
-const highlighter = await getHighlighter({
-  themes: ['dracula'],
-  langs: supportedLangs,
+const highlighter = await getHighlighterCore({
+  loadWasm: getWasmInlined,
+  themes: [dracula],
+  langs: [yaml],
 })
 
 marked.use({
