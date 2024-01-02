@@ -115,7 +115,7 @@ function SchemaPart({ key, property, parent, parentSlug }) {
       }
     }
     if (property.Enum) {
-      type = type + ': Enum';
+      type = type + ': enum';
       enumvals = property.Enum;
     }
 
@@ -172,8 +172,7 @@ function SchemaPart({ key, property, parent, parentSlug }) {
             </summary>
             <div id="${slug}" class="collapse-content">
                 <div class="property-description">
-                    ${enumvals ? html`Enum vals: ` : ''}
-                    ${enumvals ? enumHtml : ''}
+                    ${enumvals ? html`Enum vals: ${enumHtml}` : ''}
                 </div>
                 ${React.createElement("div", { className: 'property-description', dangerouslySetInnerHTML: { __html: getDescription(property) } })}
                 ${propKeys.length > 0 ? html`<br />` : ''}

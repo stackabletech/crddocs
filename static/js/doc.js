@@ -279,7 +279,7 @@ kind: ${Pr}`,g=vr.codeToHtml(Q,{lang:"yaml",theme:"dracula"});return DB`
                     </p>
                     `}
             </div>
-        `}function Tr({key:B,property:A,parent:Q,parentSlug:g}){let[E,C,e,I,t,n]=(0,dA.useMemo)(()=>{let i=A,D=A.Properties||{},a=A.Type,u=null;if(a==="array"){let k=A.Items.Schema;k.Type!=="object"?a=`[]${k.Type}`:(i=k,D=k.Properties||{},a="[]object")}A.Enum&&(a=a+": Enum",u=A.Enum);let f=Object.keys(D),M=!1;return Q&&Q.Required&&Q.Required.includes(B)&&(M=!0),[D,f,M,a,i,u]},[Q,A]),o=(0,dA.useMemo)(()=>(0,Or.default)((g?`${g}-`:"")+B),[g,B]),w=(0,dA.useMemo)(()=>{let i=new URL(location.href);return i.hash=`#${o}`,i.toJSON()}),s=(0,dA.useCallback)(()=>location.hash.substring(1).startsWith(o),[o]),[r,l]=(0,dA.useState)(B=="spec"&&!Q||s());(0,dA.useEffect)(()=>{let i=()=>{!r&&s()&&l(!0)};return window.addEventListener("hashchange",i),()=>window.removeEventListener("hashchange",i)},[r]),(0,dA.useEffect)(()=>{let i=()=>l(!1),D=()=>l(!0);return kQ.on("collapse-all",i),kQ.on("expand-all",D),()=>{kQ.off("collapse-all",i),kQ.off("expand-all",D)}},[]);let h="";return n&&(h=n.map(i=>DB`<kbd class="text-muted">${i}</kbd>`)),DB`
+        `}function Tr({key:B,property:A,parent:Q,parentSlug:g}){let[E,C,e,I,t,n]=(0,dA.useMemo)(()=>{let i=A,D=A.Properties||{},a=A.Type,u=null;if(a==="array"){let k=A.Items.Schema;k.Type!=="object"?a=`[]${k.Type}`:(i=k,D=k.Properties||{},a="[]object")}A.Enum&&(a=a+": enum",u=A.Enum);let f=Object.keys(D),M=!1;return Q&&Q.Required&&Q.Required.includes(B)&&(M=!0),[D,f,M,a,i,u]},[Q,A]),o=(0,dA.useMemo)(()=>(0,Or.default)((g?`${g}-`:"")+B),[g,B]),w=(0,dA.useMemo)(()=>{let i=new URL(location.href);return i.hash=`#${o}`,i.toJSON()}),s=(0,dA.useCallback)(()=>location.hash.substring(1).startsWith(o),[o]),[r,l]=(0,dA.useState)(B=="spec"&&!Q||s());(0,dA.useEffect)(()=>{let i=()=>{!r&&s()&&l(!0)};return window.addEventListener("hashchange",i),()=>window.removeEventListener("hashchange",i)},[r]),(0,dA.useEffect)(()=>{let i=()=>l(!1),D=()=>l(!0);return kQ.on("collapse-all",i),kQ.on("expand-all",D),()=>{kQ.off("collapse-all",i),kQ.off("expand-all",D)}},[]);let h="";return n&&(h=n.map(i=>DB`<kbd class="text-muted">${i}</kbd>`)),DB`
         <details class="collapse-panel" open="${r}" onToggle=${i=>{l(i.target.open),i.stopPropagation()}}>
             <summary class="collapse-header position-relative">
                 ${B} <kbd class="text-muted">${I}</kbd> ${e?DB`<span class="badge badge-primary">required</span>`:""}
@@ -287,8 +287,7 @@ kind: ${Pr}`,g=vr.codeToHtml(Q,{lang:"yaml",theme:"dracula"});return DB`
             </summary>
             <div id="${o}" class="collapse-content">
                 <div class="property-description">
-                    ${n?DB`Enum vals: `:""}
-                    ${n?h:""}
+                    ${n?DB`Enum vals: ${h}`:""}
                 </div>
                 ${dA.default.createElement("div",{className:"property-description",dangerouslySetInnerHTML:{__html:d0(A)}})}
                 ${C.length>0?DB`<br />`:""}
