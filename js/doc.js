@@ -103,7 +103,6 @@ function SchemaPart({ key, property, parent, parentSlug }) {
     let props = property.Properties || {};
 
     let type = property.Type;
-    let enumvals = [];
     if (type === 'array') {
       const itemsSchema = property.Items.Schema;
       if (itemsSchema.Type !== 'object') {
@@ -116,8 +115,8 @@ function SchemaPart({ key, property, parent, parentSlug }) {
     }
     if (property.Enum) {
       type = `${type}: enum`;
-      enumvals = property.Enum;
     }
+    let enumvals = property.Enum ?? [];
 
     let propKeys = Object.keys(props);
 
