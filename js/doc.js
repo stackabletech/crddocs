@@ -98,11 +98,12 @@ function CRD() {
 }
 
 function SchemaPart({ key, property, parent, parentSlug }) {
-  const [props, propKeys, required, type, schema] = useMemo(() => {
+  const [props, propKeys, required, type, schema, enumvals] = useMemo(() => {
     let schema = property;
     let props = property.Properties || {};
 
     let type = property.Type;
+    let enumvals = null;
     if (type === 'array') {
       const itemsSchema = property.Items.Schema;
       if (itemsSchema.Type !== 'object') {
@@ -113,13 +114,18 @@ function SchemaPart({ key, property, parent, parentSlug }) {
         type = `[]object`;
       }
     }
+    if (property.Enum) {
+      type = type + ': Enum';
+      enumvals = property.Enum;
+    }
+
     let propKeys = Object.keys(props);
 
     let required = false;
     if (parent && parent.Required && parent.Required.includes(key)) {
       required = true;
     }
-    return [props, propKeys, required, type, schema]
+    return [props, propKeys, required, type, schema, enumvals]
   }, [parent, property]);
 
   const slug = useMemo(() => slugify((parentSlug ? `${parentSlug}-` : '') + key), [parentSlug, key]);
@@ -153,6 +159,11 @@ function SchemaPart({ key, property, parent, parentSlug }) {
     };
   }, []);
 
+  let enumHtml = '';
+  if (enumvals) {
+    enumHtml = enumvals.map(v => html`<kbd class="text-muted">${v}</kbd>`);
+  }
+
   return html`
         <details class="collapse-panel" open="${isOpen}" onToggle=${e => { setIsOpen(e.target.open); e.stopPropagation(); }}>
             <summary class="collapse-header position-relative">
@@ -160,6 +171,10 @@ function SchemaPart({ key, property, parent, parentSlug }) {
                 <button class="btn btn-sm position-absolute right-0 top-0 m-5 copy-url z-10" type="button" data-clipboard-text="${fullLink}">🔗</button>
             </summary>
             <div id="${slug}" class="collapse-content">
+                <div class="property-description">
+                    ${enumvals ? html`Enum vals: ` : ''}
+                    ${enumvals ? enumHtml : ''}
+                </div>
                 ${React.createElement("div", { className: 'property-description', dangerouslySetInnerHTML: { __html: getDescription(property) } })}
                 ${propKeys.length > 0 ? html`<br />` : ''}
                 <div class="collapse-group">
