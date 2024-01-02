@@ -103,7 +103,7 @@ function SchemaPart({ key, property, parent, parentSlug }) {
     let props = property.Properties || {};
 
     let type = property.Type;
-    let enumvals = null;
+    let enumvals = [];
     if (type === 'array') {
       const itemsSchema = property.Items.Schema;
       if (itemsSchema.Type !== 'object') {
@@ -115,7 +115,7 @@ function SchemaPart({ key, property, parent, parentSlug }) {
       }
     }
     if (property.Enum) {
-      type = `${type}: enum`
+      type = `${type}: enum`;
       enumvals = property.Enum;
     }
 
@@ -166,7 +166,7 @@ function SchemaPart({ key, property, parent, parentSlug }) {
                 <button class="btn btn-sm position-absolute right-0 top-0 m-5 copy-url z-10" type="button" data-clipboard-text="${fullLink}">🔗</button>
             </summary>
             <div id="${slug}" class="collapse-content">
-                ${enumvals ? html`<div class="property-description mb-10">
+                ${enumvals.length > 0 ? html`<div class="property-description mb-10">
                     Enum variants: ${enumvals.map(v => html`<span class="badge text-muted mr-5 mb-5"><code>${v}</code></span>`)}
                 </div>` : ''}
                 ${React.createElement("div", { className: 'property-description', dangerouslySetInnerHTML: { __html: getDescription(property) } })}

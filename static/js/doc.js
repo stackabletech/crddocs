@@ -279,14 +279,14 @@ kind: ${Pr}`,g=vr.codeToHtml(Q,{lang:"yaml",theme:"dracula"});return DB`
                     </p>
                     `}
             </div>
-        `}function Tr({key:B,property:A,parent:Q,parentSlug:g}){let[E,C,e,I,t,n]=(0,dA.useMemo)(()=>{let u=A,w=A.Properties||{},D=A.Type,a=null;if(D==="array"){let M=A.Items.Schema;M.Type!=="object"?D=`[]${M.Type}`:(u=M,w=M.Properties||{},D="[]object")}A.Enum&&(D=D+": enum",a=A.Enum);let h=Object.keys(w),f=!1;return Q&&Q.Required&&Q.Required.includes(B)&&(f=!0),[w,h,f,D,u,a]},[Q,A]),o=(0,dA.useMemo)(()=>(0,Or.default)((g?`${g}-`:"")+B),[g,B]),i=(0,dA.useMemo)(()=>{let u=new URL(location.href);return u.hash=`#${o}`,u.toJSON()}),s=(0,dA.useCallback)(()=>location.hash.substring(1).startsWith(o),[o]),[r,l]=(0,dA.useState)(B=="spec"&&!Q||s());return(0,dA.useEffect)(()=>{let u=()=>{!r&&s()&&l(!0)};return window.addEventListener("hashchange",u),()=>window.removeEventListener("hashchange",u)},[r]),(0,dA.useEffect)(()=>{let u=()=>l(!1),w=()=>l(!0);return kQ.on("collapse-all",u),kQ.on("expand-all",w),()=>{kQ.off("collapse-all",u),kQ.off("expand-all",w)}},[]),DB`
+        `}function Tr({key:B,property:A,parent:Q,parentSlug:g}){let[E,C,e,I,t,n]=(0,dA.useMemo)(()=>{let u=A,w=A.Properties||{},D=A.Type,a=[];if(D==="array"){let M=A.Items.Schema;M.Type!=="object"?D=`[]${M.Type}`:(u=M,w=M.Properties||{},D="[]object")}A.Enum&&(D=`${D}: enum`,a=A.Enum);let h=Object.keys(w),f=!1;return Q&&Q.Required&&Q.Required.includes(B)&&(f=!0),[w,h,f,D,u,a]},[Q,A]),o=(0,dA.useMemo)(()=>(0,Or.default)((g?`${g}-`:"")+B),[g,B]),i=(0,dA.useMemo)(()=>{let u=new URL(location.href);return u.hash=`#${o}`,u.toJSON()}),s=(0,dA.useCallback)(()=>location.hash.substring(1).startsWith(o),[o]),[r,l]=(0,dA.useState)(B=="spec"&&!Q||s());return(0,dA.useEffect)(()=>{let u=()=>{!r&&s()&&l(!0)};return window.addEventListener("hashchange",u),()=>window.removeEventListener("hashchange",u)},[r]),(0,dA.useEffect)(()=>{let u=()=>l(!1),w=()=>l(!0);return kQ.on("collapse-all",u),kQ.on("expand-all",w),()=>{kQ.off("collapse-all",u),kQ.off("expand-all",w)}},[]),DB`
         <details class="collapse-panel" open="${r}" onToggle=${u=>{l(u.target.open),u.stopPropagation()}}>
             <summary class="collapse-header position-relative">
                 ${B} <span class="badge text-muted"><code>${I}</code></span> ${e?DB`<span class="badge badge-primary">required</span>`:""}
                 <button class="btn btn-sm position-absolute right-0 top-0 m-5 copy-url z-10" type="button" data-clipboard-text="${i}">🔗</button>
             </summary>
             <div id="${o}" class="collapse-content">
-                ${n?DB`<div class="property-description mb-10">
+                ${n.length>0?DB`<div class="property-description mb-10">
                     Enum variants: ${n.map(u=>DB`<span class="badge text-muted mr-5 mb-5"><code>${u}</code></span>`)}
                 </div>`:""}
                 ${dA.default.createElement("div",{className:"property-description",dangerouslySetInnerHTML:{__html:d0(A)}})}
