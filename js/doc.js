@@ -115,7 +115,7 @@ function SchemaPart({ key, property, parent, parentSlug }) {
       }
     }
     if (property.Enum) {
-      type = type + ': enum';
+      type = `${type}: enum`
       enumvals = property.Enum;
     }
 
