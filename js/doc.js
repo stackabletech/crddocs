@@ -6,7 +6,7 @@ import DOMPurify from 'dompurify'
 import { html } from 'htm/react'
 import halfmoon from 'halfmoon'
 import slugify from 'slugify'
-import marked from 'marked'
+import { marked } from 'marked'
 
 // Syntax highlighting imports
 import { getHighlighterCore } from 'shikiji/core'
@@ -57,7 +57,7 @@ function getDescription(schema) {
   if (desc.trim() == '') {
     desc = '_No Description Provided._'
   }
-  return DOMPurify.sanitize(marked(desc));
+  return DOMPurify.sanitize(marked.parse(desc));
 }
 
 function CRD() {

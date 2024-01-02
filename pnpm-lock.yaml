@@ -5,21 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@fortawesome/fontawesome-free':
-    specifier: 5.15.1
-    version: 5.15.1
   clipboard:
-    specifier: 2.0.6
-    version: 2.0.6
-  date-fns:
-    specifier: ^3.0.0
-    version: 3.0.0
+    specifier: 2.0.11
+    version: 2.0.11
   dompurify:
-    specifier: 2.2.2
-    version: 2.2.2
+    specifier: 3.0.6
+    version: 3.0.6
   eventemitter3:
-    specifier: 4.0.7
-    version: 4.0.7
+    specifier: 5.0.1
+    version: 5.0.1
   halfmoon:
     specifier: ^1.1.1
     version: 1.1.1
@@ -27,11 +21,8 @@ dependencies:
     specifier: '3'
     version: 3.1.1
   marked:
-    specifier: 1.2.4
-    version: 1.2.4
-  prismjs:
-    specifier: ^1.29.0
-    version: 1.29.0
+    specifier: 11.1.0
+    version: 11.1.0
   react:
     specifier: '16'
     version: 16.14.0
@@ -42,19 +33,16 @@ dependencies:
     specifier: '7'
     version: 7.8.0(react@16.14.0)
   slugify:
-    specifier: 1.4.6
-    version: 1.4.6
+    specifier: 1.6.6
+    version: 1.6.6
 
 devDependencies:
   esbuild:
     specifier: ^0.19.10
     version: 0.19.10
-  esbuild-plugin-prismjs:
-    specifier: ^1.0.8
-    version: 1.0.8
   shikiji:
-    specifier: ^0.9.9
-    version: 0.9.9
+    specifier: ^0.9.11
+    version: 0.9.11
 
 packages:
 
@@ -265,37 +253,21 @@ packages:
     dev: true
     optional: true
 
-  /@fortawesome/fontawesome-free@5.15.1:
-    resolution: {integrity: sha512-OEdH7SyC1suTdhBGW91/zBfR6qaIhThbcN8PUXtXilY4GYnSBbVqOntdHbC1vXwsDnX0Qix2m2+DSU1J51ybOQ==}
-    engines: {node: '>=6'}
-    requiresBuild: true
-    dev: false
-
-  /clipboard@2.0.6:
-    resolution: {integrity: sha512-g5zbiixBRk/wyKakSwCKd7vQXDjFnAMGHoEyBogG/bw9kTD9GvdAvaoRR1ALcEzt3pVKxZR0pViekPMIS0QyGg==}
+  /clipboard@2.0.11:
+    resolution: {integrity: sha512-C+0bbOqkezLIsmWSvlsXS0Q0bmkugu7jcfMIACB+RDEntIzQIkdr148we28AfSloQLRdZlYL/QYyrq05j/3Faw==}
     dependencies:
       good-listener: 1.2.2
       select: 1.1.2
       tiny-emitter: 2.1.0
     dev: false
 
-  /date-fns@3.0.0:
-    resolution: {integrity: sha512-xjDz3rNN9jp+Lh3P/4MeY4E5HkaRnEnrJCcrdRZnKdn42gJlIe6hwrrwVXePRwVR2kh1UcMnz00erYBnHF8PFA==}
-    dev: false
-
   /delegate@3.2.0:
     resolution: {integrity: sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==}
     dev: false
 
-  /dompurify@2.2.2:
-    resolution: {integrity: sha512-BsGR4nDLaC5CNBnyT5I+d5pOeaoWvgVeg6Gq/aqmKYWMPR07131u60I80BvExLAJ0FQEIBQ1BTicw+C5+jOyrg==}
+  /dompurify@3.0.6:
+    resolution: {integrity: sha512-ilkD8YEnnGh1zJ240uJsW7AzE+2qpbOUYjacomn3AvJ6J4JhKGSZ2nh4wUIXPZrEPppaCLx5jFe8T89Rk8tQ7w==}
     dev: false
-
-  /esbuild-plugin-prismjs@1.0.8:
-    resolution: {integrity: sha512-gIOl7IgYoFNmBt2e/DPWqSyPYviSFrJpCtNPnIsCvWqwx1kuKxqTzMGCUwntXJV29pwQd2prVVzh6p4Z1Vp4eQ==}
-    dependencies:
-      prismjs: 1.29.0
-    dev: true
 
   /esbuild@0.19.10:
     resolution: {integrity: sha512-S1Y27QGt/snkNYrRcswgRFqZjaTG5a5xM3EQo97uNBnH505pdzSNe/HLBq1v0RO7iK/ngdbhJB6mDAp0OK+iUA==}
@@ -328,8 +300,8 @@ packages:
       '@esbuild/win32-x64': 0.19.10
     dev: true
 
-  /eventemitter3@4.0.7:
-    resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
+  /eventemitter3@5.0.1:
+    resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
     dev: false
 
   /good-listener@1.2.2:
@@ -357,9 +329,9 @@ packages:
       js-tokens: 4.0.0
     dev: false
 
-  /marked@1.2.4:
-    resolution: {integrity: sha512-6x5TFGCTKSQBLTZtOburGxCxFEBJEGYVLwCMTBCxzvyuisGcC20UNzDSJhCr/cJ/Kmh6ulfJm10g6WWEAJ3kvg==}
-    engines: {node: '>= 8.16.2'}
+  /marked@11.1.0:
+    resolution: {integrity: sha512-fvKJWAPEafVj1dwGwcPI5mBB/0pvViL6NlCbNDG1HOIRwwAU/jeMoFxfbRLuirO1wRH7m4yPvBqD/O1wyWvayw==}
+    engines: {node: '>= 18'}
     hasBin: true
     dev: false
 
@@ -367,10 +339,6 @@ packages:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
     dev: false
-
-  /prismjs@1.29.0:
-    resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
-    engines: {node: '>=6'}
 
   /prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
@@ -424,18 +392,18 @@ packages:
     resolution: {integrity: sha512-OwpTSOfy6xSs1+pwcNrv0RBMOzI39Lp3qQKUTPVVPRjCdNa5JH/oPRiqsesIskK8TVgmRiHwO4KXlV2Li9dANA==}
     dev: false
 
-  /shikiji-core@0.9.9:
-    resolution: {integrity: sha512-qu5Qq7Co6JIMY312J9Ek6WYjXieeyJT/fIqmkcjF4MdnMNlUnhSqPo8/42g5UdPgdyTCwijS7Nhg8DfLSLodkg==}
+  /shikiji-core@0.9.11:
+    resolution: {integrity: sha512-KbZdB+0oyoyNiQT0ueXCigp/0ilu1sMvb2aD3gDIDkaQwfayet0f1/9kkh0Wvtk42KMASDR36qA8ctnTQvpocA==}
     dev: true
 
-  /shikiji@0.9.9:
-    resolution: {integrity: sha512-/S3unr/0mZTstNOuAmNDEufeimtqeQb8lXvPMLsYfDvqyfmG6334bO2xmDzD0kfxH2y8gnFgSWAJpdEzksmYXg==}
+  /shikiji@0.9.11:
+    resolution: {integrity: sha512-3lZxXOPdhUr42fDTWmWiSrWTbbrRR3YY70F24G+hwh3VmN33ocKdH8RpytyhBhYvSRpiPhHDwGl2C5ozlO6Xow==}
     dependencies:
-      shikiji-core: 0.9.9
+      shikiji-core: 0.9.11
     dev: true
 
-  /slugify@1.4.6:
-    resolution: {integrity: sha512-ZdJIgv9gdrYwhXqxsH9pv7nXxjUEyQ6nqhngRxoAAOlmMGA28FDq5O4/5US4G2/Nod7d1ovNcgURQJ7kHq50KQ==}
+  /slugify@1.6.6:
+    resolution: {integrity: sha512-h+z7HKHYXj6wJU+AnS/+IH8Uh9fdcX1Lrhg1/VMdf9PwoBQXFcXiAdsy2tSK0P6gKwJLXp02r90ahUCqHk9rrw==}
     engines: {node: '>=8.0.0'}
     dev: false
 
