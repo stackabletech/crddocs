@@ -159,21 +159,16 @@ function SchemaPart({ key, property, parent, parentSlug }) {
     };
   }, []);
 
-  let enumHtml = '';
-  if (enumvals) {
-    enumHtml = enumvals.map(v => html`<kbd class="text-muted">${v}</kbd>`);
-  }
-
   return html`
         <details class="collapse-panel" open="${isOpen}" onToggle=${e => { setIsOpen(e.target.open); e.stopPropagation(); }}>
             <summary class="collapse-header position-relative">
-                ${key} <kbd class="text-muted">${type}</kbd> ${required ? html`<span class="badge badge-primary">required</span>` : ''}
+                ${key} <span class="badge"><code>${type}</code></kbd> ${required ? html`<span class="badge badge-primary">required</span>` : ''}
                 <button class="btn btn-sm position-absolute right-0 top-0 m-5 copy-url z-10" type="button" data-clipboard-text="${fullLink}">🔗</button>
             </summary>
             <div id="${slug}" class="collapse-content">
-                <div class="property-description">
-                    ${enumvals ? html`Enum vals: ${enumHtml}` : ''}
-                </div>
+                ${enumvals ? html`<div class="property-description mb-10">
+                    Enum variants: ${enumvals.map(v => html`<span class="badge mr-5 mb-5"><code>${v}</code></kbd>`)}
+                </div>` : ''}
                 ${React.createElement("div", { className: 'property-description', dangerouslySetInnerHTML: { __html: getDescription(property) } })}
                 ${propKeys.length > 0 ? html`<br />` : ''}
                 <div class="collapse-group">
