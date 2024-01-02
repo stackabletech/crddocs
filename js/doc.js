@@ -162,12 +162,12 @@ function SchemaPart({ key, property, parent, parentSlug }) {
   return html`
         <details class="collapse-panel" open="${isOpen}" onToggle=${e => { setIsOpen(e.target.open); e.stopPropagation(); }}>
             <summary class="collapse-header position-relative">
-                ${key} <span class="badge"><code>${type}</code></kbd> ${required ? html`<span class="badge badge-primary">required</span>` : ''}
+                ${key} <span class="badge"><code>${type}</code></span> ${required ? html`<span class="badge badge-primary">required</span>` : ''}
                 <button class="btn btn-sm position-absolute right-0 top-0 m-5 copy-url z-10" type="button" data-clipboard-text="${fullLink}">🔗</button>
             </summary>
             <div id="${slug}" class="collapse-content">
                 ${enumvals ? html`<div class="property-description mb-10">
-                    Enum variants: ${enumvals.map(v => html`<span class="badge mr-5 mb-5"><code>${v}</code></kbd>`)}
+                    Enum variants: ${enumvals.map(v => html`<span class="badge mr-5 mb-5"><code>${v}</code></span>`)}
                 </div>` : ''}
                 ${React.createElement("div", { className: 'property-description', dangerouslySetInnerHTML: { __html: getDescription(property) } })}
                 ${propKeys.length > 0 ? html`<br />` : ''}
