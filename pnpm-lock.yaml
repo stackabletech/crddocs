@@ -27,8 +27,8 @@ dependencies:
     specifier: ^16.14.0
     version: 16.14.0
   react-dom:
-    specifier: ^16.14.0
-    version: 16.14.0(react@16.14.0)
+    specifier: ^18.0.0
+    version: 18.3.1(react@16.14.0)
   react-table:
     specifier: ^7.8.0
     version: 7.8.0(react@16.14.0)
@@ -352,16 +352,14 @@ packages:
       react-is: 16.13.1
     dev: false
 
-  /react-dom@16.14.0(react@16.14.0):
-    resolution: {integrity: sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==}
+  /react-dom@18.3.1(react@16.14.0):
+    resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
-      react: ^16.14.0
+      react: ^18.3.1
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
-      prop-types: 15.8.1
       react: 16.14.0
-      scheduler: 0.19.1
+      scheduler: 0.23.2
     dev: false
 
   /react-is@16.13.1:
@@ -385,11 +383,10 @@ packages:
       prop-types: 15.8.1
     dev: false
 
-  /scheduler@0.19.1:
-    resolution: {integrity: sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==}
+  /scheduler@0.23.2:
+    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
     dev: false
 
   /select@1.1.2:
