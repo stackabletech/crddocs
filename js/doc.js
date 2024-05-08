@@ -9,10 +9,10 @@ import slugify from 'slugify'
 import { marked } from 'marked'
 
 // Syntax highlighting imports
-import { getHighlighterCore } from 'shikiji/core'
-import dracula from 'shikiji/themes/dracula.mjs'
-import { getWasmInlined } from 'shikiji/wasm'
-import yaml from 'shikiji/langs/yaml.mjs'
+import { getHighlighterCore } from 'shiki/core'
+import dracula from 'shiki/themes/dracula.mjs'
+import { getWasmInlined } from 'shiki/wasm'
+import yaml from 'shiki/langs/yaml.mjs'
 
 const supportedLangs = ['yaml'];
 const bus = new EventEmitter3();
