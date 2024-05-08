@@ -21,8 +21,8 @@ dependencies:
     specifier: ^3.1.1
     version: 3.1.1
   marked:
-    specifier: 11.1.0
-    version: 11.1.0
+    specifier: 11.2.0
+    version: 11.2.0
   react:
     specifier: ^16.14.0
     version: 16.14.0
@@ -333,8 +333,8 @@ packages:
       js-tokens: 4.0.0
     dev: false
 
-  /marked@11.1.0:
-    resolution: {integrity: sha512-fvKJWAPEafVj1dwGwcPI5mBB/0pvViL6NlCbNDG1HOIRwwAU/jeMoFxfbRLuirO1wRH7m4yPvBqD/O1wyWvayw==}
+  /marked@11.2.0:
+    resolution: {integrity: sha512-HR0m3bvu0jAPYiIvLUUQtdg1g6D247//lvcekpHO1WMvbwDlwSkZAX9Lw4F4YHE1T0HaaNve0tuAWuV1UJ6vtw==}
     engines: {node: '>= 18'}
     hasBin: true
     dev: false
