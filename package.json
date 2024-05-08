@@ -7,7 +7,7 @@
     "build": "pnpm build:nav && pnpm build:home && pnpm build:org && pnpm build:doc"
   },
   "devDependencies": {
-    "esbuild": "^0.19.12",
+    "esbuild": "^0.21.1",
     "shiki": "^1.4.0"
   },
   "dependencies": {
