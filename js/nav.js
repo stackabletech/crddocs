@@ -5,7 +5,7 @@ function toggleMenu() {
 
 window.toggleMenu = toggleMenu;
 
-// Optional: Close the menu when clicking outside
+// Close the menu when clicking outside
 document.addEventListener('click', function(event) {
   var isClickInside = document.querySelector('#operator-menu-button').contains(event.target) ||
                       document.querySelector('#operator-menu').contains(event.target);
