@@ -38,8 +38,8 @@ clipboard.on('success', e => {
       tooltip.classList.remove('show');
       setTimeout(function() {
         tooltip.remove();
-      }, 300);  // Wait for fade-out transition to complete before removing
-    }, 2000);
+      }, 10);
+    }, 1500);
 
     // Clear selection
     e.clearSelection();

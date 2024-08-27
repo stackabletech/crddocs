@@ -94,23 +94,22 @@ code {
 
 .tooltip {
   visibility: hidden;
-  background-color: black;
-  color: #fff;
+  background-color: var(--color-text);
+  color: var(--color-white);
+  font-size: 12;
   text-align: center;
-  padding: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-radius: 5px;
   position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  left: -70px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
 }
 
 .tooltip.show {
   visibility: visible;
-  opacity: 1;
 }
 
 /* Add custom code block styling */
