@@ -110,14 +110,14 @@
 
 .social-icon:hover {
   background-color: var(--color-brand-primary);
-  color: var(--footer-backgroud);
+  color: var(--footer-background);
   text-decoration: none;
 }
 
 .footer-seperator {
   width: 100%;
   height: 1px;
-  background-color: var(--footer-font-color);
+  background-color: var(--footer-divider-color);
 }
 
 .copyright-notice {

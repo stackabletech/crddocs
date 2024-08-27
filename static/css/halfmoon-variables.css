@@ -1022,7 +1022,7 @@ CSS variables (CSS custom properties)
 
     /* Striped table */
 
-    --lm-table-striped-bg-color: var(--gray-color-light);
+    --lm-table-striped-bg-color: var(--color-background2);
 
     --dm-table-striped-bg-color: rgba(0, 0, 0, 0.15);
 

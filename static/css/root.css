@@ -67,7 +67,7 @@ code {
     margin-top: 0.5rem;
 }
 
-.footer {
+.navbar.navbar-static-bottom {
   padding-top: 5rem;
   border-top: none;
 }

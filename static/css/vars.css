@@ -27,6 +27,7 @@
     /* footer */
     --footer-background: var(--color-white);
     --footer-font-color: var(--color-text);
+    --footer-divider-color: var(--color-text-semi-muted);
     --footer-copyright-font-color: var(--color-text-muted);
     --footer-line-height: 1.6;
 
