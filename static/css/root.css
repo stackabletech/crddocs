@@ -1,9 +1,15 @@
+@import "fonts.css";
 @import "halfmoon-variables.css";
 @import "vars.css";
 @import "footer.css";
 @import "fontawesome/fontawesome.min.css";
 @import "fontawesome/brands.min.css";
 @import "fontawesome/solid.min.css";
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+}
 
 @media (max-width: 576px) {
     body .content-wrapper>div {
