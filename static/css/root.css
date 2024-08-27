@@ -1,10 +1,9 @@
 @import "halfmoon-variables.css";
 @import "vars.css";
 @import "footer.css";
-/* fontawesome */
-@import "fontawesome.min.css";
-@import "brands.min.css";
-@import "solid.min.css";
+@import "fontawesome/fontawesome.min.css";
+@import "fontawesome/brands.min.css";
+@import "fontawesome/solid.min.css";
 
 @media (max-width: 576px) {
     body .content-wrapper>div {
