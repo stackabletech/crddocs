@@ -7,8 +7,17 @@
 @import "fontawesome/solid.min.css";
 
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: var(--body-font-family);
   font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font-family);
+  font-weight: var(--header-font-family-weight);
+}
+
+h1 {
+  font-size: 2rem;
 }
 
 @media (max-width: 576px) {

@@ -43,6 +43,11 @@
   margin-top: 0;
 }
 
+.footer-motto, .footer-info-item h2 {
+  font-family: var(--header-font-family);
+  font-weight: var(--header-font-family-weight);
+}
+
 .footer-link-list {
   list-style-type: none;
   padding: 0;
