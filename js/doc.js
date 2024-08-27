@@ -9,9 +9,9 @@ import slugify from 'slugify'
 import { marked } from 'marked'
 
 // Syntax highlighting imports
-import { getHighlighterCore } from 'shiki/core'
+import { createHighlighterCore } from 'shiki/core'
 import dracula from 'shiki/themes/dracula.mjs'
-import { getWasmInlined } from 'shiki/wasm'
+import getWasm from 'shiki/wasm'
 import yaml from 'shiki/langs/yaml.mjs'
 
 const supportedLangs = ['yaml'];
@@ -26,8 +26,8 @@ clipboard.on('success', e => {
   })
 });
 
-const highlighter = await getHighlighterCore({
-  loadWasm: getWasmInlined,
+const highlighter = await createHighlighterCore({
+  loadWasm: getWasm,
   themes: [dracula],
   langs: [yaml],
 })
