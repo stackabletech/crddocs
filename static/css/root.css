@@ -90,6 +90,12 @@ code {
   visibility: visible;
 }
 
+.dropdown-menu {
+  top: 60px;
+  border-radius: 0;
+  border: none;
+}
+
 /* copy tooltip */
 
 .tooltip {
