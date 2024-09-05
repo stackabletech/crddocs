@@ -646,7 +646,7 @@ CSS variables (CSS custom properties)
     --content-and-card-spacing-xs-half: calc(var(--content-and-card-spacing-xs)/2); /* For rows with adjusted spacing */
     
     --content-title-font-size: 2rem;
-    --content-title-font-weight: 500;
+    --content-title-font-weight: 700;
 
     --card-border-width: var(--base-border-width);
     --card-border-radius: var(--base-border-radius);
@@ -1022,7 +1022,7 @@ CSS variables (CSS custom properties)
 
     /* Striped table */
 
-    --lm-table-striped-bg-color: var(--gray-color-light);
+    --lm-table-striped-bg-color: var(--color-background2);
 
     --dm-table-striped-bg-color: rgba(0, 0, 0, 0.15);
 
@@ -4969,11 +4969,6 @@ body {
     .content {
         margin: var(--content-and-card-spacing-xs);
     }
-}
-.content-title {
-    font-size: var(--content-title-font-size);
-    font-weight: var(--content-title-font-weight);
-    margin-top: 0;
 }
 .card {
     position: relative;

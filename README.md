@@ -1,14 +1,16 @@
 # Stackable CRD docs
 
-Generated with https://github.com/stackabletech/crddocs-generator (have a look there for how it works)
+https://crds.stackable.tech/
 
 ## Building
 
 run `make`, the site is generated in the `site` directory.
 
+Generated with https://github.com/stackabletech/crddocs-generator (have a look there for how it works).
+
 ## Configuring
 
-configure the repos and versions in the `repo.yaml`.
+Configure the repos and versions in the `repo.yaml`.
 
 HTML templates are in the `template` dir, styling in `static`.
 

@@ -4,14 +4,13 @@ import ClipboardJS from 'clipboard'
 import { render } from 'react-dom'
 import DOMPurify from 'dompurify'
 import { html } from 'htm/react'
-import halfmoon from 'halfmoon'
 import slugify from 'slugify'
 import { marked } from 'marked'
 
 // Syntax highlighting imports
-import { getHighlighterCore } from 'shiki/core'
+import { createHighlighterCore } from 'shiki/core'
 import dracula from 'shiki/themes/dracula.mjs'
-import { getWasmInlined } from 'shiki/wasm'
+import getWasm from 'shiki/wasm'
 import yaml from 'shiki/langs/yaml.mjs'
 
 const supportedLangs = ['yaml'];
@@ -20,14 +19,37 @@ window.bus = bus;
 
 const clipboard = new ClipboardJS('.copy-url');
 clipboard.on('success', e => {
-  halfmoon.initStickyAlert({
-    content: "Copied Link!",
-    timeShown: 2000
-  })
+    // Get the button that was clicked
+    var button = e.trigger;
+
+    // Create the tooltip
+    var tooltip = document.createElement('span');
+    tooltip.className = 'tooltip';
+    tooltip.innerHTML = 'Copied!';
+    button.appendChild(tooltip);
+
+    // Show the tooltip
+    setTimeout(function() {
+      tooltip.classList.add('show');
+    }, 50);
+
+    // Hide the tooltip after 2 seconds and remove it
+    setTimeout(function() {
+      tooltip.classList.remove('show');
+      setTimeout(function() {
+        tooltip.remove();
+      }, 10);
+    }, 1500);
+
+    // Clear selection
+    e.clearSelection();
+});
+clipboard.on('error', e => {
+  console.error('Copy failed!');
 });
 
-const highlighter = await getHighlighterCore({
-  loadWasm: getWasmInlined,
+const highlighter = await createHighlighterCore({
+  loadWasm: getWasm,
   themes: [dracula],
   langs: [yaml],
 })

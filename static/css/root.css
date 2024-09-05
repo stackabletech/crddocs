@@ -1,10 +1,29 @@
+@import "fonts.css";
 @import "halfmoon-variables.css";
 @import "vars.css";
 @import "footer.css";
-/* fontawesome */
-@import "fontawesome.min.css";
-@import "brands.min.css";
-@import "solid.min.css";
+@import "fontawesome/fontawesome.min.css";
+@import "fontawesome/brands.min.css";
+@import "fontawesome/solid.min.css";
+
+body {
+  font-family: var(--body-font-family);
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font-family);
+  font-weight: var(--header-font-family-weight);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+code {
+  font-family: var(--monospace-font-family);
+}
 
 @media (max-width: 576px) {
     body .content-wrapper>div {
@@ -17,6 +36,8 @@
 
 .navbar {
     background: var(--navbar-background);
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.1);
+    border-bottom: none;
 }
 
 .nav-link {
@@ -46,13 +67,63 @@
     margin-top: 0.5rem;
 }
 
+.navbar.navbar-static-bottom {
+  padding-top: 5rem;
+  border-top: none;
+}
+
+.collapse-header, .collapse-panel[open] .collapse-header {
+  background-color: var(--color-background2);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+/* operator menu */
+
+#operator-menu {
+  visibility: hidden;
+}
+
+#operator-menu.active {
+  visibility: visible;
+}
+
+.dropdown-menu {
+  top: 60px;
+  border-radius: 0;
+  border: none;
+}
+
+/* copy tooltip */
+
+.tooltip {
+  visibility: hidden;
+  background-color: var(--color-text);
+  color: var(--color-white);
+  font-size: 12;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  position: absolute;
+  left: -70px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+}
+
+.tooltip.show {
+  visibility: visible;
+}
+
 /* Add custom code block styling */
 
 .shiki {
     padding: 1em;
     border-radius: 0.3em;
     overflow: auto;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     font-size: 1em;
     text-align: left;
     line-height: 1.5;
