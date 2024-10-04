@@ -1,2 +1,0 @@
-(()=>{function n(){var e=document.getElementById("operator-menu");e.classList.toggle("active")}window.toggleMenu=n;document.addEventListener("click",function(e){var t=document.querySelector("#operator-menu-button").contains(e.target)||document.querySelector("#operator-menu").contains(e.target);t||document.getElementById("operator-menu").classList.remove("active")});})();
-//# sourceMappingURL=nav.js.map
