@@ -23,7 +23,9 @@
     --header-font-family-weight: 600; /* semi-bold */
     /* navbar */
     --navbar-background: var(--color-white);
+    --navbar-background-hover: var(--color-background2);
     --navbar-font-color: var(--color-text);
+    --navbar-font-color-hover: var(--color-brand-primary);
     /* footer */
     --footer-background: var(--color-white);
     --footer-font-color: var(--color-text);

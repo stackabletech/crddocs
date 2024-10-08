@@ -45,8 +45,8 @@ code {
 }
 
 .nav-link:hover {
-    color: var(--navbar-font-color);
-    text-decoration: underline;
+    color: var(--navbar-font-color-hover);
+    text-decoration: none;
 }
 
 .nav-item.active>.nav-link,
@@ -86,14 +86,26 @@ code {
   visibility: hidden;
 }
 
-#operator-menu.active {
+#operator-menu-button:hover + #operator-menu,
+#operator-menu:hover {
   visibility: visible;
 }
 
 .dropdown-menu {
-  top: 60px;
+  top: var(--navbar-height);
   border-radius: 0;
   border: none;
+  padding: 0px;
+}
+
+.dropdown-item {
+  color: var(--navbar-font-color);
+  background-color: var(--navbar-background);
+}
+.dropdown-item:hover {
+  text-decoration: none;
+  color: var(--navbar-font-color-hover);
+  background-color: var(--navbar-background-hover);
 }
 
 /* copy tooltip */

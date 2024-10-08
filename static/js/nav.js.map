@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../js/nav.js"],
-  "sourcesContent": ["function toggleMenu() {\n  var menu = document.getElementById('operator-menu');\n  menu.classList.toggle('active');\n}\n\nwindow.toggleMenu = toggleMenu;\n\n// Optional: Close the menu when clicking outside\ndocument.addEventListener('click', function(event) {\n  var isClickInside = document.querySelector('#operator-menu-button').contains(event.target) ||\n                      document.querySelector('#operator-menu').contains(event.target);\n  if (!isClickInside) {\n    document.getElementById('operator-menu').classList.remove('active');\n  }\n});"],
-  "mappings": "MAAA,SAASA,GAAa,CACpB,IAAIC,EAAO,SAAS,eAAe,eAAe,EAClDA,EAAK,UAAU,OAAO,QAAQ,CAChC,CAEA,OAAO,WAAaD,EAGpB,SAAS,iBAAiB,QAAS,SAASE,EAAO,CACjD,IAAIC,EAAgB,SAAS,cAAc,uBAAuB,EAAE,SAASD,EAAM,MAAM,GACrE,SAAS,cAAc,gBAAgB,EAAE,SAASA,EAAM,MAAM,EAC7EC,GACH,SAAS,eAAe,eAAe,EAAE,UAAU,OAAO,QAAQ,CAEtE,CAAC",
-  "names": ["toggleMenu", "menu", "event", "isClickInside"]
-}
