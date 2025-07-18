@@ -77,6 +77,8 @@ repos:
     - "23.4.1"
     - "23.1.0"
     - "nightly"
+  opensearch-operator:
+    - "nightly"
   spark-k8s-operator:
     - "25.3.0"
     - "24.11.1"
