@@ -1,5 +1,5 @@
 [build]
-command = "make"
+command = "make clean site"
 publish = "site"
 
 [build.environment]
