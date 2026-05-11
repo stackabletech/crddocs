@@ -2,9 +2,12 @@
 
 https://crds.stackable.tech/
 
-## Building
+## Building & Running
 
-run `make`, the site is generated in the `site` directory.
+First run `git submodule update --init` to pull the `crddocs-generator`.
+
+Afterwards run `make`, the site is generated in the `site` directory.
+To access the rendered contents use `make serve`.
 
 Generated with https://github.com/stackabletech/crddocs-generator (have a look there for how it works).
 
@@ -27,10 +30,15 @@ There was a slight modification for navbar alignment.
 
 ### How to add a new platform release
 
-The docs are built for all the repos and branches configured in the `repos.yaml` file.
-so if this file is updated and merged into main, the automated Netlify build will automatically build
-new documentation for any changes. Instructions:
+The docs are built for all the repos configured in the `repos.yaml` file. The
+list of versions is auto-discovered from GitHub at build time: all calver tags
+(`YY.M.P`) on each repo are listed and only the latest patch per `YY.M`
+release line is kept (e.g. `24.11.0` is hidden once `24.11.1` exists).
+`nightly` (tracking `main`) is always included.
 
-- Add the new {major}.{minor}.{patch} version for all `repos` as well as a `platformVersion` to the `repos.yaml` file.
-- Merge these changes into main.
-- Wait 5 minutes for the Netlify build to update the page. You can also manually run the "Trigger Netlify build hook" GitHub action to trigger a build.
+A new SDP release therefore only needs the operator repos to be tagged on
+GitHub — no change to `repos.yaml` is required. Trigger the "Trigger Netlify
+build hook" GitHub action (or wait for the next build) to pick it up.
+
+To add or remove a repo from the site, edit the flat list in `repos.yaml` and
+merge to main.
