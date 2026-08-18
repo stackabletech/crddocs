@@ -10,6 +10,8 @@ on:
     - cron: '30 2 * * 1-5'
   workflow_dispatch:
 
+permissions: {}
+
 jobs:
   build:
     runs-on: ubuntu-latest
